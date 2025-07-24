@@ -1,10 +1,18 @@
 # NgMenuDashboard
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.1.1.
+**NgMenuDashboard** is a responsive web application built with **Angular** and **Tailwind CSS**, designed to simulate a modern client and sales dashboard. It demonstrates core frontend skills such as routing, component architecture, service-based data handling, and modular styling.
 
-## Development server
+> 🔧 **Backend integration:** A future enhancement includes connecting to a `.NET Core Web API` to handle client data operations and simulate a production-ready full-stack system.
 
-To start a local development server, run:
+## 🚀 Features
+
+- Angular 20+ with Standalone Components
+- Tailwind CSS for utility-first responsive design
+- Modular component and service structure
+- Client list and form simulation with dummy data
+- Prepared for integration with .NET Web API backend
+
+## 🛠 Development server
 
 ```bash
 ng serve
