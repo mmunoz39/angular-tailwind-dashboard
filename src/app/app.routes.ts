@@ -7,7 +7,7 @@ export const routes: Routes = [
         children: [
             {
                 path: 'dashboard',
-                loadComponent: () => import('./business/dashboard/dashboard.component')
+                loadComponent: () => import('./business/dashboard/dashboard.component').then(m => m.DashboardComponent)
             },
                         {
                 path: 'profile',

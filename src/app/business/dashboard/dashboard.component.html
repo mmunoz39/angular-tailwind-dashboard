@@ -7,14 +7,20 @@
               <path d="M2.25 18a.75.75 0 000 1.5c5.4 0 10.63.722 15.6 2.075 1.19.324 2.4-.558 2.4-1.82V18.75a.75.75 0 00-.75-.75H2.25z"></path>
             </svg>
           </div>
+          <!-- Today's Money -->
           <div class="p-4 text-right">
             <p class="block antialiased font-sans text-sm leading-normal font-normal text-blue-gray-600">Today's Money</p>
-            <h4 class="block antialiased tracking-normal font-sans text-2xl font-semibold leading-snug text-blue-gray-900">$53k</h4>
+            <h4 class="block antialiased tracking-normal font-sans text-2xl font-semibold leading-snug text-blue-gray-900">{{ metric?.todaysMoney | number }}</h4>
           </div>
           <div class="border-t border-blue-gray-50 p-4">
-            <p class="block antialiased font-sans text-base leading-relaxed font-normal text-blue-gray-600">
-              <strong class="text-green-500">+55%</strong>&nbsp;than last week
-            </p>
+            <div *ngIf="metric" class="block antialiased font-sans text-base leading-relaxed font-normal text-blue-gray-600">
+              <strong [ngClass]="{
+                'text-green-500': metric.percentChange.todaysMoney >= 0,
+                'text-red-500': metric.percentChange.todaysMoney < 0
+              }">
+                {{ metric.percentChange.todaysMoney }}%
+              </strong>&nbsp;than last week
+            </div>
           </div>
         </div>
         <div class="relative flex flex-col bg-clip-border rounded-xl bg-white text-gray-700 shadow-md">
